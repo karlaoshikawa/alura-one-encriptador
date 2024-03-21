@@ -1,6 +1,7 @@
 let encryptButton = document.getElementById("encrypt-button");
 let descryptButton = document.getElementById("descrypt-button");
 let textInput = document.getElementById("text-input");
+let copyButton = document.getElementById("copy-button");
 
 // As "chaves" de criptografia que utilizaremos são:
 // A letra "e" é convertida para "enter"
@@ -46,6 +47,47 @@ encryptButton.addEventListener("click", () => {
   const text = handleIncrypt(inputValue);
   const textoElement = document.querySelector("h3");
   textoElement.textContent = text;
+  textInput.value = "";
 });
 
+const handleDescrypt = (text) => {
+  const replaceArr = [
+    [/enter/g, "a"],
+    [/imes/g, "e"],
+    [/ai/g, "i"],
+    [/ober/g, "o"],
+    [/ufat/g, "u"],
+  ];
 
+  const textDescrypted = replaceArr.reduce((acc, [regex, replacement]) => {
+    return acc.replace(regex, replacement);
+  }, text);
+
+  return textDescrypted;
+};
+
+descryptButton.addEventListener("click", () => {
+  const inputValue = textInput.value;
+  const descryptText = handleDescrypt(inputValue);
+  const textoElement = document.querySelector("h3");
+  textoElement.textContent = descryptText;
+  textInput.value = "";
+});
+
+const copyText = () => {
+  var text = document.querySelector("h3").textContent;
+
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      alert("Texto copiado: " + text);
+    })
+    .catch((err) => {
+      console.error("Falha ao copiar texto: ", err);
+    });
+};
+
+copyButton.addEventListener("click", () => {
+  copyText();
+  textInput.value = "";
+});
