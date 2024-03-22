@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/encrypt-fav-one.ico" type="image/x-icon">
     <title>Encriptador - One</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="container">
     <header>
       <img
+        class="logo-img"
         src="./images/encrypt-logo-one.webp"
         alt="logo encriptador de texto"
       />
@@ -18,15 +21,21 @@
       <div>
         <input id="text-input" type="text" placeholder="Digite seu texto" />
         <div>
-          <p id="encrypt-button" >Criptografar</p>
+          <p id="encrypt-button">Criptografar</p>
           <p id="descrypt-button">Descriptografar</p>
         </div>
       </div>
       <div>
+        <img
+          class="cat-img"
+          src="./images/cat-thinking.jpeg"
+          alt="gatinho estilo fantasia com olhos grandes pensando"
+        />
         <h3></h3>
         <p id="copy-button">Copiar</p>
       </div>
     </main>
     <script src="index.js" defer></script>
   </body>
+  </div>
 </html>
