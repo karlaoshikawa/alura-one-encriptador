@@ -5,71 +5,110 @@
 }
 
 body {
-  background-color: #1a1a1a;
-  color: #fff;
-  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #2e2e2e;
+  font-family: Roboto, sans-serif;
   display: flex;
-  justify-content:center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
-  background-color: #00063d;
-  border: 2px solid #f26419;
+  background-color: #f0f2f5;
   border-radius: 18px;
+  box-shadow: 5px 5px 5px #c8d0e7, -5px -5px 5px #ffffff;
+  display: flex;
+  width: 1200px;
+}
+
+.main-box {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  align-items: center;
 }
 
 header {
   display: flex;
-  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px 0;
   text-align: center;
 }
 
 header h1 {
-  color: #f6a02d;
+  color: #2e2e2e;
+  margin-left: 10px;
 }
 
 .logo-img {
   width: 4rem;
+  height: 4rem;
 }
 
 main {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
+#text-input {
+  width: calc(100% - 5%);
+  padding: 12px;
   margin-bottom: 10px;
-  background-color: #333;
-  color: #fff;
+  background-color: #f0f2f5;
+  color: #2e2e2e;
+  /* border: 1px solid #d9d9d9; */
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+  box-shadow: inset 3px 3px 7px #c8d0e7, inset -7px -7px 14px #ffffff;
 }
 
-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
+#text-input:focus {
+  outline: none;
+}
+
+#text-input::placeholder {
+  padding-left: 20px;
+}
+
+.button-box {
+  display: flex;
+}
+
+.button-crypt {
+  padding: 10px 30px;
+  text-transform: uppercase;
+  background-color: #f0f2f5;
+  color: #f26419;
+  /* border: 1px solid #d9d9d9; */
+  margin: 0 10px;
   border-radius: 5px;
+  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px 7px #c8d0e7, -7px -7px 14px #ffffff;
 }
 
-button:hover {
-  background-color: #0056b3;
+.button-crypt:hover {
+  background-color: #e0e0e0;
 }
 
 h3 {
   margin-top: 20px;
   font-size: 20px;
+  max-height: 100px; 
+  overflow: auto;
 }
 
 .cat-img {
-  width:300px;
+  width: 550px;
+  height: auto;
+  border-radius: 0 18px 18px 0;
+  box-shadow: 10px 10px 20px #c7c7c7, -10px -10px 20px #ffffff;
 }
 
 #copy-button {

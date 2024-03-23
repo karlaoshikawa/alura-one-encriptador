@@ -26,11 +26,11 @@ const handleIncrypt = (text) => {
     .split("")
     .map((letter) => {
       switch (letter) {
-        case "a":
-          return "enter";
         case "e":
-          return "imes";
+          return "enter";
         case "i":
+          return "imes";
+        case "a":
           return "ai";
         case "o":
           return "ober";
@@ -54,9 +54,9 @@ encryptButton.addEventListener("click", () => {
 
 const handleDescrypt = (text) => {
   const replaceArr = [
-    [/enter/g, "a"],
-    [/imes/g, "e"],
-    [/ai/g, "i"],
+    [/enter/g, "e"],
+    [/imes/g, "i"],
+    [/ai/g, "a"],
     [/ober/g, "o"],
     [/ufat/g, "u"],
   ];
@@ -91,6 +91,6 @@ const copyText = () => {
 
 copyButton.addEventListener("click", () => {
   copyText();
-  textElement.textContent;
+  textElement.textContent = "";
   textInput.value = "";
 });

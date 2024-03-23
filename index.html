@@ -3,39 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/encrypt-fav-one.ico" type="image/x-icon">
+    <link rel="icon" href="./images/encrypt-fav-one.ico" type="image/x-icon" />
     <title>Encriptador - One</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div class="container">
-    <header>
-      <img
-        class="logo-img"
-        src="./images/encrypt-logo-one.webp"
-        alt="logo encriptador de texto"
-      />
-      <h1>Encriptador de texto</h1>
-    </header>
-    <main>
-      <div>
-        <input id="text-input" type="text" placeholder="Digite seu texto" />
-        <div>
-          <p id="encrypt-button">Criptografar</p>
-          <p id="descrypt-button">Descriptografar</p>
-        </div>
+      <div class="main-box">
+        <header>
+          <img
+            class="logo-img"
+            src="./images/encrypt-logo-one.webp"
+            alt="logo encriptador de texto"
+          />
+          <h1>Encriptador de texto</h1>
+        </header>
+        <main>
+          <div>
+            <div class="button-box">
+              <p id="encrypt-button" class="button-crypt">Criptografar</p>
+              <p id="descrypt-button" class="button-crypt">Descriptografar</p>
+            </div>
+
+            <textarea
+              id="text-input"
+              rows="8"
+              cols="80"
+              placeholder="Digite seu texto aqui..."
+            ></textarea>
+          </div>
+
+          <div>
+            <h3></h3>
+            <p id="copy-button">Copiar</p>
+          </div>
+        </main>
       </div>
-      <div>
+      <aside>
         <img
           class="cat-img"
           src="./images/cat-thinking.jpeg"
           alt="gatinho estilo fantasia com olhos grandes pensando"
         />
-        <h3></h3>
-        <p id="copy-button">Copiar</p>
-      </div>
-    </main>
+      </aside>
+    </div>
     <script src="index.js" defer></script>
   </body>
-  </div>
 </html>
