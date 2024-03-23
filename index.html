@@ -19,23 +19,29 @@
           <h1>Encriptador de texto</h1>
         </header>
         <main>
-          <div>
-            <div class="button-box">
-              <p id="encrypt-button" class="button-crypt">Criptografar</p>
-              <p id="descrypt-button" class="button-crypt">Descriptografar</p>
-            </div>
-
+          <div id="button-box">
+            <p id="encrypt-button" class="button-crypt">Criptografar</p>
+            <p id="descrypt-button" class="button-crypt">Descriptografar</p>
+          </div>
+          <div id="input-box" style="display: none">
             <textarea
               id="text-input"
               rows="8"
               cols="80"
               placeholder="Digite seu texto aqui..."
             ></textarea>
+            <div class="input-buttons">
+            <p id="send-button" class="button-input" style="display: none"></p>
+            <p id="back-button" class="button-crypt" >Voltar</p>
+            </div>
           </div>
 
-          <div>
-            <h3></h3>
+          <div id="result-box" style="display: none">
+            <h3 class="result"></h3>
+            <div class="input-buttons">
             <p id="copy-button">Copiar</p>
+            <p id="back-button" class="button-crypt" >Voltar</p>
+            </div>
           </div>
         </main>
       </div>

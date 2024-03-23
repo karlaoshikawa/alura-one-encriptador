@@ -20,20 +20,23 @@ body {
   box-shadow: 5px 5px 5px #c8d0e7, -5px -5px 5px #ffffff;
   display: flex;
   width: 1200px;
+  justify-content: space-between;
 }
 
 .main-box {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 1;
 }
 
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 20px 0;
+  padding: 30px 50px 20px;
   text-align: center;
+  border-bottom: 2px solid #f26419;
 }
 
 header h1 {
@@ -51,15 +54,22 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 600px;
+}
+
+#input-box, #result-box{
+  display: flex;
+  flex-direction: column;
+ justify-content: center;
+ align-items: center;
 }
 
 #text-input {
   width: calc(100% - 5%);
   padding: 12px;
-  margin-bottom: 10px;
+  margin: 20px 0;
   background-color: #f0f2f5;
   color: #2e2e2e;
-  /* border: 1px solid #d9d9d9; */
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -75,22 +85,44 @@ main {
   padding-left: 20px;
 }
 
-.button-box {
+#button-box {
   display: flex;
+  flex-direction: row;
+  margin-top: 50px;
 }
 
-.button-crypt {
-  padding: 10px 30px;
+.input-buttons{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.button-input, #copy-button  {
+ padding: 15px 30px;
   text-transform: uppercase;
-  background-color: #f0f2f5;
-  color: #f26419;
-  /* border: 1px solid #d9d9d9; */
+  text-align: center;
+  background-image: linear-gradient(to top,#f26419, #F6A02D );
+  color: #f0f2f5;
   margin: 0 10px;
   border-radius: 5px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 3px 3px 7px #c8d0e7, -7px -7px 14px #ffffff;
+  box-shadow: 3px 3px 7px #c8d0e7, -7px -7px 7px #ffffff;
+}
+
+.button-crypt {
+  padding: 15px 30px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #f0f2f5;
+  color: #f26419;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 3px 3px 7px #c8d0e7, -7px -7px 7px #ffffff;
 }
 
 .button-crypt:hover {
@@ -100,8 +132,12 @@ main {
 h3 {
   margin-top: 20px;
   font-size: 20px;
-  max-height: 100px; 
+  max-height: 100px;
   overflow: auto;
+   background-color: #f0f2f5;
+  border-radius: 18px;
+  box-shadow: 5px 5px 5px #c8d0e7, -5px -5px 5px #ffffff;
+  padding: 25px;
 }
 
 .cat-img {
@@ -111,12 +147,5 @@ h3 {
   box-shadow: 10px 10px 20px #c7c7c7, -10px -10px 20px #ffffff;
 }
 
-#copy-button {
-  cursor: pointer;
-  color: #007bff;
-  margin-top: 10px;
-}
 
-#copy-button:hover {
-  text-decoration: underline;
-}
+

@@ -2,6 +2,11 @@ let encryptButton = document.getElementById("encrypt-button");
 let descryptButton = document.getElementById("descrypt-button");
 let textInput = document.getElementById("text-input");
 let copyButton = document.getElementById("copy-button");
+let sendButton = document.getElementById("send-button");
+let backButton = document.getElementById("back-button"); 
+let inputBox = document.getElementById("input-box");
+let buttonBox = document.getElementById("button-box");
+let resultBox = document.getElementById("result-box");
 let textElement = document.querySelector("h3");
 
 let copyMessage;
@@ -46,10 +51,9 @@ const handleIncrypt = (text) => {
 };
 
 encryptButton.addEventListener("click", () => {
-  const inputValue = textInput.value;
-  const text = handleIncrypt(inputValue);
-  textElement.textContent = text;
-  textInput.value = "";
+  sendButton.textContent = "Criptografar";
+  buttonBox.style.display = "none";
+  inputBox.style.display = "flex";
 });
 
 const handleDescrypt = (text) => {
@@ -69,28 +73,58 @@ const handleDescrypt = (text) => {
 };
 
 descryptButton.addEventListener("click", () => {
-  const inputValue = textInput.value;
-  const descryptText = handleDescrypt(inputValue);
+  sendButton.textContent = "Descriptografar";
+  buttonBox.style.display = "none";
+  inputBox.style.display = "flex";
+});
 
+textInput.addEventListener("input", function () {
+  if (textInput.value.trim() !== "") {
+    sendButton.style.display = "block";
+  } else {
+    sendButton.style.display = "none";
+  }
+});
+
+sendButton.addEventListener("click", () => {
+  const inputValue = textInput.value;
+  let descryptText;
+  if (sendButton.textContent === "Criptografar") {
+    descryptText = handleIncrypt(inputValue);
+  } else {
+    descryptText = handleDescrypt(inputValue);
+  }
+  inputBox.style.display = "none";
+  resultBox.style.display = "flex";
   textElement.textContent = descryptText;
   textInput.value = "";
 });
 
 const copyText = () => {
- let text = textElement.textContent;
+  let text = textElement.textContent;
 
   navigator.clipboard
     .writeText(text)
     .then(() => {
-      copyMessage = "Texto copiado com sucesso"
+      copyMessage = "Texto copiado com sucesso";
     })
     .catch((err) => {
-      copyMessage = `Falha ao copiar o texto. ${err}`
+      copyMessage = `Falha ao copiar o texto. ${err}`;
     });
 };
 
 copyButton.addEventListener("click", () => {
   copyText();
+  resultBox.style.display = "none";
+  buttonBox.style.display = "flex";
   textElement.textContent = "";
   textInput.value = "";
 });
+
+backButton.addEventListener("click", () => {
+  resultBox.style.display = "none";
+  inputBox.style.display = "none";
+  buttonBox.style.display = "flex";
+  textElement.textContent = "";
+  textInput.value = "";
+})
