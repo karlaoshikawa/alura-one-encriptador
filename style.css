@@ -1,3 +1,13 @@
+:root {
+  --primary-color: #f26419;
+  --secondary-color: #f6a02d;
+  --background-color: #f0f2f5;
+  --text-color: #2e2e2e;
+  --box-shadow-light: 5px 5px 5px #c8d0e7, -5px -5px 5px #ffffff;
+  --box-shadow-dark: 10px 10px 20px #c7c7c7, -10px -10px 20px #ffffff;
+  --border-radius: 18px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -5,8 +15,8 @@
 }
 
 body {
-  background-color: #f0f2f5;
-  color: #2e2e2e;
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: Roboto, sans-serif;
   display: flex;
   justify-content: center;
@@ -15,9 +25,9 @@ body {
 }
 
 .container {
-  background-color: #f0f2f5;
-  border-radius: 18px;
-  box-shadow: 5px 5px 5px #c8d0e7, -5px -5px 5px #ffffff;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-light);
   display: flex;
   width: 1200px;
   justify-content: space-between;
@@ -28,6 +38,7 @@ body {
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
+  position: relative;
 }
 
 header {
@@ -36,11 +47,11 @@ header {
   align-items: center;
   padding: 30px 50px 20px;
   text-align: center;
-  border-bottom: 2px solid #f26419;
+  border-bottom: 2px solid var(--primary-color);
 }
 
 header h1 {
-  color: #2e2e2e;
+  color: var(--text-color);
   margin-left: 10px;
 }
 
@@ -57,19 +68,20 @@ main {
   width: 600px;
 }
 
-#input-box, #result-box{
+#input-box,
+#result-box {
   display: flex;
   flex-direction: column;
- justify-content: center;
- align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #text-input {
   width: calc(100% - 5%);
   padding: 12px;
   margin: 20px 0;
-  background-color: #f0f2f5;
-  color: #2e2e2e;
+  background-color: var(--background-color);
+  color: var(--text-color);
   border: none;
   border-radius: 8px;
   font-size: 16px;
@@ -91,38 +103,39 @@ main {
   margin-top: 50px;
 }
 
-.input-buttons{
+.input-buttons {
   display: flex;
   flex-direction: row;
   margin-top: 20px;
 }
 
-.button-input, #copy-button  {
- padding: 15px 30px;
+.button-input,
+#copy-button {
+  padding: 15px 30px;
   text-transform: uppercase;
   text-align: center;
-  background-image: linear-gradient(to top,#f26419, #F6A02D );
-  color: #f0f2f5;
+  background-image: linear-gradient(to top, var(--primary-color), var(--secondary-color));
+  color: var(--background-color);
   margin: 0 10px;
   border-radius: 5px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 3px 3px 7px #c8d0e7, -7px -7px 7px #ffffff;
+  box-shadow: var(--box-shadow-light);
 }
 
 .button-crypt {
   padding: 15px 30px;
   text-transform: uppercase;
   text-align: center;
-  background-color: #f0f2f5;
-  color: #f26419;
+  background-color: var(--background-color);
+  color: var(--primary-color);
   margin: 0 10px;
   border-radius: 5px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 3px 3px 7px #c8d0e7, -7px -7px 7px #ffffff;
+  box-shadow: var(--box-shadow-light);
 }
 
 .button-crypt:hover {
@@ -132,20 +145,41 @@ main {
 h3 {
   margin-top: 20px;
   font-size: 20px;
-  max-height: 100px;
+  max-height: 200px;
   overflow: auto;
-   background-color: #f0f2f5;
-  border-radius: 18px;
-  box-shadow: 5px 5px 5px #c8d0e7, -5px -5px 5px #ffffff;
+  background-color: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-light);
   padding: 25px;
+  font-weight: 400;
 }
 
 .cat-img {
   width: 550px;
   height: auto;
-  border-radius: 0 18px 18px 0;
-  box-shadow: 10px 10px 20px #c7c7c7, -10px -10px 20px #ffffff;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  box-shadow: var(--box-shadow-dark);
 }
 
+footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
 
+h4, a {
+  font-size: 16px;
+  color: #c5c5c5;
+  font-weight: 400;
+  padding: 0 15px 10px 0;
+}
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  transform: scale(1.1);
+  color: var(--primary-color);
+}

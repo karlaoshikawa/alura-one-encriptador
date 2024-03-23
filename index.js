@@ -4,6 +4,7 @@ let textInput = document.getElementById("text-input");
 let copyButton = document.getElementById("copy-button");
 let sendButton = document.getElementById("send-button");
 let backButton = document.getElementById("back-button"); 
+let backResultButton = document.getElementById("back-result-button"); 
 let inputBox = document.getElementById("input-box");
 let buttonBox = document.getElementById("button-box");
 let resultBox = document.getElementById("result-box");
@@ -121,10 +122,18 @@ copyButton.addEventListener("click", () => {
   textInput.value = "";
 });
 
-backButton.addEventListener("click", () => {
+const handleBack = () => {
   resultBox.style.display = "none";
   inputBox.style.display = "none";
   buttonBox.style.display = "flex";
   textElement.textContent = "";
   textInput.value = "";
-})
+}
+
+backButton.addEventListener("click", () => {
+  handleBack();
+});
+
+backResultButton.addEventListener("click", () => {
+  handleBack();
+});
