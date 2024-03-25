@@ -118,6 +118,7 @@ copyButton.addEventListener("click", () => {
   copyText();
   resultBox.style.display = "none";
   buttonBox.style.display = "flex";
+  sendButton.style.display = "none";
   textInput.value = "";
   textElement.textContent = "";
 });
@@ -133,7 +134,6 @@ const handleBack = () => {
 
 backButton.addEventListener("click", () => {
   handleBack();
-  console.log(textInput.value);
 });
 
 backResultButton.addEventListener("click", () => {
