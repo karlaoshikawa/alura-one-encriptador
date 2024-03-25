@@ -118,20 +118,22 @@ copyButton.addEventListener("click", () => {
   copyText();
   resultBox.style.display = "none";
   buttonBox.style.display = "flex";
-  textElement.textContent = "";
   textInput.value = "";
+  textElement.textContent = "";
 });
 
 const handleBack = () => {
   resultBox.style.display = "none";
   inputBox.style.display = "none";
   buttonBox.style.display = "flex";
-  textElement.textContent = "";
+  sendButton.style.display = "none";
   textInput.value = "";
+  textElement.textContent = "";
 }
 
 backButton.addEventListener("click", () => {
   handleBack();
+  console.log(textInput.value);
 });
 
 backResultButton.addEventListener("click", () => {
