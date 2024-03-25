@@ -30,9 +30,13 @@ Fiz um layout pernalizado. Ao invés de pedir que o usuário digite apenas em le
 
 - [Figma proposto pelo desafio](https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Challenge---Desafio-1---L%C3%B3gica?type=design&node-id=16-802&mode=design&t=2yW8MGRi9cDUPxwa-0)
 
-## 🔗 Deploy
+## 🔗 Deploy & Preview
 
 - [Deploy na Vercel](https://alura-one-encriptador.vercel.app/)
+
+<p align="center">
+  <img src="images/decodificador-preview.gif" alt="Preview do projeto">
+</p>
 
 ## ⚙️  Stacks
 HTML | CSS | JS
