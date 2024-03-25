@@ -32,7 +32,7 @@ Fiz um layout pernalizado. Ao invés de pedir que o usuário digite apenas em le
 
 ## 🔗 Deploy & Preview
 
-- [Deploy na Vercel](https://alura-one-encriptador.vercel.app/)
+- [Deploy Github Pages](https://karlaoshikawa.github.io/alura-one-encriptador/)
 
 <p align="center">
   <img src="images/decodificador-preview.gif" alt="Preview do projeto">
