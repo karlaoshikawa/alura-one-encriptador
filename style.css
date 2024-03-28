@@ -189,6 +189,31 @@ a:hover {
   color: var(--primary-color);
 }
 
+#message-box {
+  position:relative;
+  margin-top: 20px;
+  
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow-light);
+  padding: 20px;
+  font-weight: 400;
+  
+}
+
+#copy-message {
+  font-size: 20px;
+color: var(--text-color);
+}
+
+#close-copy-message{
+  position:absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  color: #c5c5c5;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .container {
     width: 900px;

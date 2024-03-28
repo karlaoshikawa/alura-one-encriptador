@@ -9,8 +9,9 @@ let inputBox = document.getElementById("input-box");
 let buttonBox = document.getElementById("button-box");
 let resultBox = document.getElementById("result-box");
 let textElement = document.querySelector("h3");
-
-let copyMessage;
+let closeCopyMessage = document.getElementById("close-copy-message");
+let copyMessage = document.getElementById("copy-message");
+let messageBox = document.getElementById("message-box");
 
 // As "chaves" de criptografia que utilizaremos são:
 // A letra "e" é convertida para "enter"
@@ -107,10 +108,10 @@ const copyText = () => {
   navigator.clipboard
     .writeText(text)
     .then(() => {
-      copyMessage = "Texto copiado com sucesso";
+      copyMessage.innerText = "Texto copiado com sucesso";
     })
     .catch((err) => {
-      copyMessage = `Falha ao copiar o texto. ${err}`;
+      copyMessage.innerText = `Falha ao copiar o texto. ${err}`;
     });
 };
 
@@ -119,6 +120,7 @@ copyButton.addEventListener("click", () => {
   resultBox.style.display = "none";
   buttonBox.style.display = "flex";
   sendButton.style.display = "none";
+  messageBox.style.display = "flex";
   textInput.value = "";
   textElement.textContent = "";
 });
