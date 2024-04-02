@@ -26,7 +26,7 @@ Por exemplo:
 A página deve ter campos para inserção do texto a ser criptografado ou descriptografado, e a pessoa usuária deve poder escolher entre as duas opções
 O resultado deve ser exibido na tela.
 
-Fiz um layout pernalizado. Ao invés de pedir que o usuário digite apenas em letra minúscula e sem acento, estou tratando o texto no código.
+Fiz um layout personalizado. Ao invés de pedir que o usuário digite apenas em letra minúscula e sem acento, estou tratando o texto no código.
 
 - [Figma proposto pelo desafio](https://www.figma.com/file/tvFEYhVfZTjdJ5P24RGV21/Alura-Challenge---Desafio-1---L%C3%B3gica?type=design&node-id=16-802&mode=design&t=2yW8MGRi9cDUPxwa-0)
 
